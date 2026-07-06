@@ -45,6 +45,7 @@ Run the packaged Java application using:
 java -jar build/libs/calculator.jar
 ```
 <img src="Screenshots/9.png" alt="1" width="500">
+
 ## Summary
 - Clone the source code from GitHub
 
