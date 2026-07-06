@@ -40,9 +40,11 @@ Package the project into a JAR file using Gradle:
 
 
 ## Step 4: Run the Application
-Run the packaged Java application using 
+Run the packaged Java application using: 
 ```bash
 java -jar build/libs/calculator.jar
 ```
 <img src="Screenshots/9.png" alt="1" width="500">
+## Summary
+- Clone the source code from GitHub
 
