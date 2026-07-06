@@ -27,6 +27,11 @@ As shown above, Gradle’s toolchain detected that the project strictly requires
   <img src="Screenshots/4.png" alt="1" width="500">
   <img src="Screenshots/5.png" alt="1" width="500">
 
-### Run Unit Test again 
+### Run the Unit Test again 
 With Java 17 successfully configured, running gradle test compiled the test classes and completed flawlessly.
-    <img src="Screenshots/6.png" alt="1" width="500">
+
+<img src="Screenshots/6.png" alt="1" width="500">
+
+## Step 3: Build the Application Artifact
+
+<img src="Screenshots/7.png" alt="1" width="500">
