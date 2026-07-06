@@ -36,3 +36,13 @@ With Java 17 successfully configured, running gradle test compiled the test clas
 Package the project into a JAR file using Gradle:
 
 <img src="Screenshots/7.png" alt="1" width="500">
+<img src="Screenshots/8.png" alt="1" width="500">
+
+
+## Step 4: Run the Application
+Run the packaged Java application using 
+```bash
+java -jar build/libs/calculator.jar
+```
+<img src="Screenshots/9.png" alt="1" width="500">
+
