@@ -5,8 +5,7 @@ This repository documents the step-by-step process of setting up, testing, build
 ##  First Step: Cloning the Repository
 
 
-First, the source code was cloned from the remote repository onto the Ubuntu machine:
-
+Clone the source code from GitHub:
 ```bash
 git clone [https://github.com/Ibrahim-Adel15/calculator-gradle.git](https://github.com/Ibrahim-Adel15/calculator-gradle.git)
 cd calculator-gradle
