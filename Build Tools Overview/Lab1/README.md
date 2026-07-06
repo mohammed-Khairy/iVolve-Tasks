@@ -48,4 +48,6 @@ java -jar build/libs/calculator.jar
 
 ## Summary
 - Clone the source code from GitHub
-
+- Run the Unit Test
+- Build the Application Artifact
+- Run the Application
