@@ -2,7 +2,7 @@
 
 This repository documents the step-by-step process of setting up, testing, building, and running a Java-based calculator application using **Gradle**. It also highlights a common Java Toolchain issue encountered during execution and how it was successfully resolved.
 
-##  First Step: Cloning the Repository
+##  Step 1: Cloning the Repository
 
 
 Clone the source code from GitHub:
@@ -14,3 +14,4 @@ cd calculator-gradle
 
 <img src="Screenshots/2.png" alt="1" width="500">
 
+##  Step 2: Run the Unit Test
