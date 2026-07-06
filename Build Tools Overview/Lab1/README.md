@@ -1,5 +1,5 @@
 ##Fsdsad
-![Main Error](Screenshots/3.png)
+<img src="screenshots/3.png" width="600">
 sdasdsdd
 dsdsd
 sd
