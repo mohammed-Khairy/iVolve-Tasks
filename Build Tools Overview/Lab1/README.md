@@ -33,5 +33,6 @@ With Java 17 successfully configured, running gradle test compiled the test clas
 <img src="Screenshots/6.png" alt="1" width="500">
 
 ## Step 3: Build the Application Artifact
+Package the project into a JAR file using Gradle:
 
 <img src="Screenshots/7.png" alt="1" width="500">
