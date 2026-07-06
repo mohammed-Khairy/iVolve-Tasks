@@ -15,3 +15,5 @@ cd calculator-gradle
 <img src="Screenshots/2.png" alt="1" width="500">
 
 ##  Step 2: Run the Unit Test
+
+When attempting to execute the unit tests using gradle test, the build failed with the following error:
