@@ -12,3 +12,5 @@ cd calculator-gradle
 ```
 <img src="Screenshots/1.png" alt="1" width="500">
 
+<img src="Screenshots/2.png" alt="1" width="500">
+
