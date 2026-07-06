@@ -22,3 +22,8 @@ When attempting to execute the unit test using gradle test, the build failed wit
 
 As shown above, Gradle’s toolchain detected that the project strictly requires Java 17, which was missing from the local environment.
 ### Resolution Steps
+    1- List Available Java Versions
+    2- Install & Set Java 17 as Default
+  <img src="Screenshots/4.png" alt="1" width="500">
+  <img src="Screenshots/5.png" alt="1" width="500">
+    
