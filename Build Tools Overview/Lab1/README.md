@@ -1,2 +1,2 @@
 #F
-![Main Error](screenshots/3.png)
+![Main Error](Screenshots/3.png)
