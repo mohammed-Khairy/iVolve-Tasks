@@ -38,6 +38,7 @@ docker images
 Run the container in detached mode (-d) and map the host's port 8080 to the container's internal port 8080:
 ```bash
 docker run -d --name container2 -p 8080:8080 app2
+curl http://localhost:8080
 ```
 <img src="Screenshots/6.png" alt="1" width="500">
 
