@@ -65,7 +65,7 @@ curl localhost:8083
 
 ---
 
-## 🏆 Conclusion & Best Practices Summary 
+## 🏆 Conclusion & Best Practices Summary: 
  For a scalable and collaborative project, the best practice is to combine Approach 2 (Environment Files) and Approach 3 (Dockerfile Defaults):
 
 - Documented Defaults (Dockerfile ENV): Using the ENV instruction inside the Dockerfile serves as living documentation. It defines the baseline variables needed for the app to run. Any new developer joining the project can immediately understand what configuration the application expects just by reading the Dockerfile.
