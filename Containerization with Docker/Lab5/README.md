@@ -30,7 +30,7 @@ docker images
 ```
 <img src="Screenshots/3.png" alt="1" width="500">
 
-## step 4: Run container2 from app2 Image & Test the Application
+## step 4: Run container3 from app3 Image & Test the Application
 Run the container in detached mode (-d) and map the host's port 8080 to the container's internal port 8080:
 ```bash
 docker run -d --name container3 -p 8080:8080 app3
