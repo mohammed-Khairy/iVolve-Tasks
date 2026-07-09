@@ -15,3 +15,21 @@ Verify the creation and inspect the volume's default storage path (Mountpoint) o
 ```bash
 docker volume inspect nginx_logs
 ```
+<img src="Screenshots/1.png" alt="1" width="500">
+
+## Step 2: Set Up the Bind Mount and Custom File
+Next, you will prepare the local directory and file on your host machine that you want the Nginx server to host.
+
+Create the directory structure nginx-bind/html all at once using the -p flag:
+```bash
+mkdir -p nginx-bind/html
+```
+Create an index.html file inside that directory containing the phrase "Hello from Bind Mount":
+
+<img src="Screenshots/2.png" alt="1" width="500">
+
+## Step 3: Run the Nginx Container with Volume and Bind Mount
+Now, start the container and map both the Named Volume and the Bind Mount simultaneously within a single command:
+
+<img src="Screenshots/3.png" alt="1" width="500">
+
