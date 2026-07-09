@@ -33,3 +33,22 @@ Now, start the container and map both the Named Volume and the Bind Mount simult
 
 <img src="Screenshots/3.png" alt="1" width="500">
 
+## Step 4: Verify Nginx and the Bind Mount
+Verify that the Nginx server is correctly serving your custom file by sending a request to port 8080 using curl:
+
+<img src="Screenshots/4.png" alt="1" width="500">
+
+## Step 5: Modify the HTML File and Confirm Real-Time Updates
+A key advantage of a Bind Mount is that any changes made to the host file system are instantly reflected inside the container without requiring a container restart.
+
+Update the text in your local index.html file:
+Test it again using curl:
+
+<img src="Screenshots/5.png" alt="1" width="500">
+
+## Step 6: Verify Log Storage in the Volume
+Since you executed the curl command twice, Nginx should have recorded these access logs. Let's verify that they are safely stored in the volume on the host.
+
+<img src="Screenshots/6.png" alt="1" width="500">
+
+
