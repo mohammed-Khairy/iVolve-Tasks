@@ -10,9 +10,9 @@ Clone the application source code and navigate into the project directory:
 <img src="Screenshots/1.png" alt="1" width="500">
 
 ## step 2: Configure Environment Variables (.env)
-To ensure sensitive data (like database credentials) are kept secure and decoupled from the infrastructure setup,
+To ensure sensitive data (like database credentials) are kept secure and decoupled from the infrastructure setup:
 - create a `.env` file in the project's root directory 
-- Add the environment variables inside the .env file:
+- Add the environment variables inside the .env file
   
 <img src="Screenshots/2.png" alt="1" width="500">
 
