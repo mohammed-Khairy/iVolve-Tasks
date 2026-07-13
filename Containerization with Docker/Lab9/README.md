@@ -32,23 +32,29 @@ docker-compose ps
 ```
 <img src="Screenshots/5.png" alt="1" width="500">
 
-## step 5: Check Application Status
+## step 5: Check Application Logs & Database Connectivity
+Verify that the Node.js application has successfully connected to the MySQL database by checking the container logs:
+
+<img src="Screenshots/13.png" alt="1" width="500">
+
+
+## step 6: Check Application Status
 Verify that the application successfully serves the frontend via curl:
 
 <img src="Screenshots/7.png" alt="1" width="500">
 <img src="Screenshots/8.png" alt="1" width="500">
 
-## step 6: Check Health and Readiness Endpoints
+## step 7: Check Health and Readiness Endpoints
 Test the application's health status and readiness checks:
 
 <img src="Screenshots/6.png" alt="1" width="500">
 
-## step 7: Inspect Access Logs
+## step 8: Inspect Access Logs
 Verify that the application is successfully logging incoming requests inside the named volume:
 
 <img src="Screenshots/9.png" alt="1" width="500">
 
-## step 8: Distributing the Docker Image
+## step 9: Distributing the Docker Image
 1. Authenticate with DockerHub:
    
 Log in to your DockerHub account using your credentials or a Personal Access Token (PAT):
