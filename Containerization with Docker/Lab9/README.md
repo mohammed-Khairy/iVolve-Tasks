@@ -32,8 +32,36 @@ docker-compose ps
 ```
 <img src="Screenshots/5.png" alt="1" width="500">
 
-## step 5: Check Health and Readiness Endpoints
+## step 5: Check Application Status
+Verify that the application successfully serves the frontend via curl:
+
+<img src="Screenshots/7.png" alt="1" width="500">
+<img src="Screenshots/8.png" alt="1" width="500">
+
+## step 6: Check Health and Readiness Endpoints
 Test the application's health status and readiness checks:
 
 <img src="Screenshots/6.png" alt="1" width="500">
+
+## step 7: Inspect Access Logs
+Verify that the application is successfully logging incoming requests inside the named volume:
+
+<img src="Screenshots/9.png" alt="1" width="500">
+
+## step 8: Distributing the Docker Image
+1. Authenticate with DockerHub:
+   
+Log in to your DockerHub account using your credentials or a Personal Access Token (PAT):
+
+<img src="Screenshots/10.png" alt="1" width="500">
+
+2. Tag and Push the Image:
+   
+Tag the built local image to match your DockerHub repository and push it:
+``` bash
+docker tag kubernets-app_app khairyops/node-mysql-app:v1
+docker push khairyops/node-mysql-app:v1
+```
+<img src="Screenshots/11.png" alt="1" width="500">
+
 
