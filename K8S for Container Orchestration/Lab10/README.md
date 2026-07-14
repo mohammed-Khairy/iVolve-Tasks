@@ -14,3 +14,17 @@ Since we are utilizing the Killercoda Playground for this lab, we will bypass th
 
 Verification:
 To verify that the pre-provisioned 2-node cluster is active and healthy in the playground, run:
+```bash
+kubectl get nodes
+```
+<img src="Screenshots/1.png" alt="1" width="500">
+
+## Step 2: Apply Taint to the Worker Node
+To prevent pods from being scheduled on the worker node unless they specifically tolerate it, we apply a Taint.
+
+<img src="Screenshots/2.png" alt="1" width="500">
+
+## step 3: Describe Nodes to Verify the Taint
+Verify that the taint has been successfully attached to the node metadata by describing the node. 
+
+<img src="Screenshots/3.png" alt="1" width="500">
