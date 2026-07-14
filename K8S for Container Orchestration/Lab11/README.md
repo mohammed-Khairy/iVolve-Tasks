@@ -61,7 +61,7 @@ To prove beyond doubt that the Resource Quota is working, we will try to deploy 
    <img src="Screenshots/9.png" alt="1" width="500">
 
 
-### Result: You will find exactly 2 Pods Running.
+### Result: You will find exactly 2 Pods Running, and the ReplicaSet will show that only 2 out of 3 desired pods were created.
 
 To locate the third pod and discover why it was blocked, let's inspect the ReplicaSet created by our Deployment:
 
