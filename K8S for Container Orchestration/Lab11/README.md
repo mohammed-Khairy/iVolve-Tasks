@@ -65,7 +65,7 @@ To prove beyond doubt that the Resource Quota is working, we will try to deploy 
 
 To locate the third pod and discover why it was blocked, let's inspect the ReplicaSet created by our Deployment:
 
-Describe the ReplicaSet to view the rejection events sent by the Kubernetes API server:
+- Describe the ReplicaSet to view the rejection events sent by the Kubernetes API server:
 ```bash
 kubectl describe replicaset nginx-deployment-6658f59756 -n ivolve
 ```
