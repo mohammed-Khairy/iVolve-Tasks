@@ -3,7 +3,7 @@ This repository/guide provides a step-by-step walkthrough to perform **Node Isol
 
 ---
 
-# Step 1: Run Kubernetes cluster with 2 nodes
+## Step 1: Run Kubernetes cluster with 2 nodes
 How to run it locally (using Minikube):
 If we were setting up this lab on a local machine, we would spin up a 2-node Kubernetes cluster using the following Minikube command:
 ```bash
