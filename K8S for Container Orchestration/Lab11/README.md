@@ -16,7 +16,7 @@ In this lab, we will perform Namespace Management and Resource Quota Enforcement
 - **Ease of Maintenance:** Modifying resources in a YAML file is safer and more organized than remembering complex terminal commands.
 ---
 
-## Step 1: Create the Namespace `(namespace.yaml)`
+## Step 1: Create the Namespace (`namespace.yaml`)
 The Namespace acts as an isolated virtual workspace where we will run our resources.
 
 - create a new file named `namespace.yaml` with the following configuration into the file:
