@@ -7,13 +7,13 @@ In this lab, we will perform Namespace Management and Resource Quota Enforcement
 
  In Kubernetes, we can manage resources using either Imperative commands (e.g., kubectl create namespace ivolve) or Declarative configurations (using YAML files). In this lab, we strictly use the Declarative approach for several key reasons:
 
-- Fully Documented (Infrastructure as Code): Your entire cluster setup is documented in human-readable files, acting as a single source of truth.
+- **Fully Documented:** Your entire cluster setup is documented in human-readable files, acting as a single source of truth.
 
-- Version Control Friendly: YAML files can be tracked in Git, allowing you to view history, review changes, and roll back easily.
+- **Version Control Friendly:** YAML files can be tracked in Git, allowing you to view history, review changes, and roll back easily.
 
-- Repeatability and Consistency: You can confidently recreate the exact same environment on any other Kubernetes cluster with a single command.
+- **Repeatability and Consistency:** You can confidently recreate the exact same environment on any other Kubernetes cluster with a single command.
 
-- Ease of Maintenance: Modifying resources in a YAML file is safer and more organized than remembering complex terminal commands.
+- **Ease of Maintenance:** Modifying resources in a YAML file is safer and more organized than remembering complex terminal commands.
 ---
 
 ## Step 1: Create the Namespace `(namespace.yaml)`
