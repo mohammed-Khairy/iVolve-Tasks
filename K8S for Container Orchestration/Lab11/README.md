@@ -2,8 +2,9 @@
 This repository provides a step-by-step walkthrough to perform Namespace Management and Resource Quota Enforcement in Kubernetes.
 In this lab, we will perform Namespace Management and Resource Quota Enforcement.
 
-> **A Quick Note:** Before we dive into the steps:
 ## 🧠 Declarative vs. Imperative Approach
+> **A Quick Note:** Before we dive into the steps:
+
  In Kubernetes, we can manage resources using either Imperative commands (e.g., kubectl create namespace ivolve) or Declarative configurations (using YAML files). In this lab, we strictly use the Declarative approach for several key reasons:
 
 - Fully Documented (Infrastructure as Code): Your entire cluster setup is documented in human-readable files, acting as a single source of truth.
