@@ -1,5 +1,5 @@
 # Node Isolation Using Taints in Kubernetes
-This repository/guide provides a step-by-step walkthrough to perform **Node Isolation Using Taints** .
+This repository provides a step-by-step walkthrough to perform **Node Isolation Using Taints** .
 
 ---
 
