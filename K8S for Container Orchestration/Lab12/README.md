@@ -15,8 +15,36 @@ echo -n 'my_secure_root_pass' | base64
 ```
 
 ## Step 2: Create the Secret Manifest
-Create a file named secret.yaml to store your encoded sensitive MySQL credentials.
+Create a file named `secret.yaml` to store your encoded sensitive MySQL credentials.
 
-<img src="Screenshots/2.png" alt="1" width="500">
+```bash
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-credentials
+  namespace: default
+type: Opaque
+data:
+  DB_PASSWORD: bXlfc2VjdXJlX3VzZXJfcGFzcw=
+  MYSQL_ROOT_PASSWORD: bXlfc2VjdXJlX3Jvb3RfcGFzcw=
+```
+
 
 ## Step 3: Create the ConfigMap Manifest
+Create a file named `configmap.yaml` to store non-sensitive configuration parameters.
+
+<img src="Screenshots/1.png" alt="1" width="500">
+
+## Step 4: Apply the Manifests to the Cluster
+Deploy both resources to your Kubernetes cluster using kubectl apply:
+
+<img src="Screenshots/2.png" alt="1" width="500">
+<img src="Screenshots/3.png" alt="1" width="500">
+
+## Step 5: Verify the Created Resources
+Verify that the ConfigMap and Secret have been successfully created and contain the correct metadata.
+
+<img src="Screenshots/4.png" alt="1" width="500">
+<img src="Screenshots/5.png" alt="1" width="500">
+
+
