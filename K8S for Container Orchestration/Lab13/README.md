@@ -9,12 +9,12 @@ Create a file named `log-pv.yaml` to define a Persistent Volume. This volume all
 
 <img src="Screenshots/1.png" alt="1" width="500">
 
-Step 2: Define the Persistent Volume Claim (PVC) Manifest
+## Step 2: Define the Persistent Volume Claim (PVC) Manifest
 Create a file named log-pvc.yaml to define a Persistent Volume Claim that requests 1Gi of storage with an access mode matching the PV (ReadWriteMany).
 
 <img src="Screenshots/2.png" alt="1" width="500">
 
-Step 3: Apply the Manifests to the Cluster
+## Step 3: Apply the Manifests to the Cluster
 Deploy both resources to your Kubernetes cluster using kubectl apply:
 
 <img src="Screenshots/3.png" alt="1" width="500">
