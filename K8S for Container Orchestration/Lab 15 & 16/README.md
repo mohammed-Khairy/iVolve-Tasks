@@ -1,6 +1,6 @@
 
 #  Node.js Application Deployment with ClusterIP service
-This guide walks through deploying a Node.js application alongside a MySQL database in a multi-node Kubernetes cluster. It includes configuring persistence (PV/PVC), environment configuration (ConfigMap & Secrets), node scheduling constraints (Tolerations & NodeSelectors), database initialization via Init Containers, and internal routing using a ClusterIP Service.
+This guide walks through deploying a Node.js application alongside a MySQL database in a multi-node Kubernetes cluster.database initialization via Init Containers, and internal routing using a ClusterIP Service.
 
 
 ---
