@@ -39,6 +39,8 @@ Apply the deployment and service manifests:
 <img src="Screenshots/5.png" alt="1" width="500">
 
 
-## Step 4: Verify Application Logs and Service Connectivity
+## Step 4: Testing & Verification
+
+Verify Application Logs and Service Connectivity
 
 <img src="Screenshots/6.png" alt="1" width="500">
