@@ -32,10 +32,14 @@ Create a file named `service.yaml` to route traffic to the application replicas:
 <img src="Screenshots/4.png" alt="1" width="300">
 
 
-Apply the deployment:
-Apply the service:
+## Step 4: Apply the configuration files
 
-## Step 3: Verify Application Logs
+Apply the deployment and service manifests:
+
+<img src="Screenshots/5.png" alt="1" width="500">
+
+
+## Step 4: Verify Application Logs
 Check application logs to confirm successful connection to MySQL:
 
 <img src="Screenshots/6.png" alt="1" width="500">
