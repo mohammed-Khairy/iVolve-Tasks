@@ -16,11 +16,12 @@ Apply the policy to the ivolve namespac
 kubectl apply -f network-policy.yaml -n ivolve
 ```
 
-Step 3: Verify Policy Deployment
+## Step 3: Verify Policy Deployment
 List all active network policies in the ivolve namespace:
 
+<img src="Screenshots/2.png" alt="1" width="500">
 
-Step 4: Describe NetworkPolicy Details
+## Step 4: Describe NetworkPolicy Details
 Inspect the detailed rules applied by the policy to confirm that ingress restrictions are properly set up:
 
-<img src="Screenshots/3.png" alt="1" width="500">
+<img src="Screenshots/3.png" alt="1" width="700">
