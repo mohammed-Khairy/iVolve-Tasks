@@ -16,3 +16,6 @@ kubectl apply -f deployment.yaml -n ivolve
 Inspect one of the newly created Pods to confirm that Kubernetes registered the CPU and Memory limits/requests correctly:
 
 <img src="Screenshots/2.png" alt="1" width="700">
+
+- We can monitor live CPU and Memory consumption across Pods in the namespace using 
+```kubectl top pod -n ivolve``` but it requires the Metrics Server to be deployed and active in the cluster.
