@@ -2,7 +2,7 @@
 This lab focuses on implementing Resource Management for the Node.js application by defining CPU and Memory Requests and Limits in the Deployment specification, followed by status verification.
 ---
 ## Step 1: Update Deployment Manifest
-Update the existing deployment.yaml file to include the resources section under the application container spec:
+Update the existing `deployment.yaml` file to include the resources section under the application container spec:
 
 <img src="Screenshots/1.png" alt="1" width="700">
 
