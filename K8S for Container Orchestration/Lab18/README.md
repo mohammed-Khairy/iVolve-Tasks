@@ -6,4 +6,5 @@ This lab focuses on securing internal cluster communication by implementing a Ku
 ## Step 1: Create the network-policy.yaml File
 Create a new file named network-policy.yaml with the following specification:
 
-<img src="Screenshots/1.png" alt="1" width="700">
+
+
