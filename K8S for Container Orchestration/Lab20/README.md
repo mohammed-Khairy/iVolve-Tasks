@@ -10,7 +10,8 @@ Create a unified declarative manifest containing all RBAC objects
 ## Step 2: Apply Configuration & Generate SA Token
 Apply the declarative configuration file to create all resources at once, then generate an authentication token for jenkins-sa.
 
-> Note: You can customize the token's lifetime using the --duration flag. Accepted time units include s (seconds), m (minutes), or h (hours).
+> _Note: You can customize the token's lifetime using the --duration flag. Accepted time units include s (seconds), m (minutes), or h (hours).
+> If no duration flag is specified, Kubernetes defaults to 1 hour (1h)._
 
 <img src="Screenshots/2.png" alt="1" width="700">
 
