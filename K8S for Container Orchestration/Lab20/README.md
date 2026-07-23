@@ -6,3 +6,14 @@ This repository is a step-by-step practical guide for configuring Role-Based Acc
 Create a unified declarative manifest containing all RBAC objects
 
 <img src="Screenshots/1.png" alt="1" width="500">
+
+## Step 2: Apply Configuration & Generate SA Token
+Apply the declarative configuration file to create all resources at once, then generate an authentication token for jenkins-sa.
+
+<img src="Screenshots/2.png" alt="1" width="700">
+
+
+## Step 4: Validation & Verification
+Validate that the jenkins-sa Service Account has read-only access to Pods and is restricted from performing unauthorized actions.
+
+<img src="Screenshots/3.png" alt="1" width="700">
