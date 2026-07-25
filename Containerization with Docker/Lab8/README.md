@@ -1,6 +1,8 @@
 
 # Custom Docker Network for Microservices
+
 A step-by-step practical laboratory guide demonstrating containerization and secure service discovery using Docker custom networks. This lab sets up isolated Frontend and Backend multi-container environments to demonstrate the principles of **Docker Network Isolation**.
+
 ---
 
 ## Step 1: Clone the Repository
