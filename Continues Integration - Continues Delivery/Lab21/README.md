@@ -1,6 +1,6 @@
 # Role-Based Authorization in Jenkins
 
-This lab demonstrates how to secure Jenkins using the Role-based Authorization Strategy plugin. Two users are created with different roles
+A step-by-step practical laboratory guide demonstrating how to secure Jenkins using the Role-based Authorization Strategy plugin. Two users are created with different roles
 
 ---
 ## Step 1: Install the Role-based Authorization Strategy Plugin
