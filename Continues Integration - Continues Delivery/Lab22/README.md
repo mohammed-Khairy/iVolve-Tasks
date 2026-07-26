@@ -84,40 +84,9 @@ pipeline {
         }
 
         stage('6. Edit Image in deployment.yaml') {
+          stage('Update deployment.yaml') {
             steps {
-                echo "Updating deployment manifest..."
-                sh '''
-                    DEPLOY_FILE=$(find . -maxdepth 2 -name "*deploy*.yaml" -o -name "*deploy*.yml" | head -n 1)
-
-                    if [ -z "$DEPLOY_FILE" ]; then
-                        echo "deployment.yaml not found, creating a new deployment.yaml..."
-                        cat <<EOF > deployment.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: demo-app
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: demo-app
-  template:
-    metadata:
-      labels:
-        app: demo-app
-    spec:
-      containers:
-      - name: demo-app
-        image: ${FULL_IMAGE}
-        ports:
-        - containerPort: 8080
-EOF
-                        DEPLOY_FILE="deployment.yaml"
-                    fi
-
-                    echo "Modifying image in $DEPLOY_FILE"
-                    sed -i "s|image: .*|image: ${FULL_IMAGE}|g" "$DEPLOY_FILE"
-                '''
+                sh "sed -i 's|image:.*|image: ${IMAGE_NAME}:${IMAGE_TAG}|' deployment.yaml"
             }
         }
 
