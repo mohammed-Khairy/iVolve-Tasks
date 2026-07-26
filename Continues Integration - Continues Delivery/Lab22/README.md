@@ -130,6 +130,7 @@ Go to Jenkins Dashboard > Manage Jenkins > Credentials.
 ## Step 3: Create Jenkins Pipeline Job and Validate Pipeline
 
 - In Jenkins Dashboard, click New Item.
+- Choose Definition: Pipeline script from SCM: Git
 - Click Build Now to trigger the build. Monitor the Stage View to verify all  steps execute successfully.
 
 <img src="Screenshots/1.png" alt="1" width="800">
