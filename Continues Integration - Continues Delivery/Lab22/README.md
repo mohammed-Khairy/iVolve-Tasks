@@ -124,9 +124,8 @@ pipeline {
 ## Step 3: Add Required Credentials in Jenkins
 Go to Jenkins Dashboard > Manage Jenkins > Credentials.
 
-Add Docker Hub credentials (Username with password) with ID: docker-hub-credentials.
-
-Add Kubeconfig configuration with ID: kubeconfig-credentials.
+- Add Docker Hub credentials (Username with password) 
+- Add Kubeconfig configuration with ID: kubeconfig-credentials.
 
 ## Step 3: Create Jenkins Pipeline Job
 In Jenkins Dashboard, click New Item.
