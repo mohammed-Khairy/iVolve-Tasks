@@ -127,19 +127,12 @@ Go to Jenkins Dashboard > Manage Jenkins > Credentials.
 - Add Docker Hub credentials (Username with password) 
 - Add Kubeconfig configuration with ID: kubeconfig-credentials.
 
-## Step 3: Create Jenkins Pipeline Job
-In Jenkins Dashboard, click New Item.
+## Step 3: Create Jenkins Pipeline Job and Validate Pipeline
 
-Enter Lab22-Jenkins-Pipeline as the item name, select Pipeline, and click OK.
-
-Under the Pipeline configuration section:
-
-Definition: Pipeline script from SCM
-
-SCM: Git
-
-## Step 4: Run and Validate Pipeline
-Click Build Now to trigger the build. Monitor the Stage View to verify all  steps execute successfully.
+- In Jenkins Dashboard, click New Item.
+- Click Build Now to trigger the build. Monitor the Stage View to verify all  steps execute successfully.
 
 <img src="Screenshots/1.png" alt="1" width="800">
+
+
 
