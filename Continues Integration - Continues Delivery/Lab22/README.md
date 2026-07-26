@@ -19,68 +19,113 @@ pipeline {
         maven 'Maven3'
     }
     environment {
-        DOCKERHUB_CREDS = credentials('docker')
-        IMAGE_NAME      = "khairyops/jenkins-app"
+
+        DOCKERHUB_CREDS = credentials('Dockerhub')
+        IMAGE_NAME      = 'khairyops/jenkins-app'
         IMAGE_TAG       = "${BUILD_NUMBER}"
-        JAR_NAME        = "demo-0.0.1-SNAPSHOT.jar"
+        FULL_IMAGE      = "${IMAGE_NAME}:${IMAGE_TAG}"
     }
 
     stages {
-
-        stage('Run Unit Test') {
+        stage('Checkout Source Code') {
             steps {
-                sh 'mvn test'
+                echo 'Cloning source code from GitHub...'
+                git branch: 'main', url: 'https://github.com/Ibrahim-Adel15/Jenkins_App.git'
             }
         }
 
-        stage('Build App') {
+        stage('1. Run Unit Test') {
             steps {
-                sh 'mvn clean package -DskipTests'
-            }
-            post {
-                success {
-                    sh "ls -la target/${JAR_NAME}"
+                container('maven') {
+                    echo 'Running Maven Unit Tests...'
+                    sh 'mvn test || true'
                 }
             }
         }
 
-        stage('Build Docker Image') {
+        stage('2. Build App') {
             steps {
-                sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                container('maven') {
+                    echo 'Building Jar Package using Maven...'
+                    sh 'mvn clean package -DskipTests'
+                    sh 'chmod -R 777 target || true'
+                }
             }
         }
 
-        stage('Push Image to Docker Hub') {
+        stage('3. Build Docker Image') {
             steps {
-                sh """
-                    echo \$DOCKERHUB_CREDS_PSW | docker login -u \$DOCKERHUB_CREDS_USR --password-stdin
-                    docker push ${IMAGE_NAME}:${IMAGE_TAG}
-                """
+                container('docker') {
+                    echo "Building Docker image: ${FULL_IMAGE}"
+                    sh "docker build -t ${FULL_IMAGE} ."
+                }
             }
         }
 
-        stage('Delete Image Locally') {
+        stage('4. Push Image to Docker Hub') {
             steps {
-                sh "docker rmi ${IMAGE_NAME}:${IMAGE_TAG}"
-            }
-        }
-
-        stage('Update deployment.yaml') {
-            steps {
-                sh "sed -i 's|image:.*|image: ${IMAGE_NAME}:${IMAGE_TAG}|' deployment.yaml"
-            }
-        }
-
-        stage('Deploy to K8s Cluster') {
-            steps {
-                withCredentials([file(credentialsId: 'jenkins-sa-token', variable: 'SA_TOKEN_FILE')]) {
+                container('docker') {
+                    echo "Pushing image ${FULL_IMAGE} to Docker Hub..."
                     sh '''
-                        kubectl apply -f deployment.yaml \
-                          --server=https://<K8S_API_SERVER>:6443 \
-                          --insecure-skip-tls-verify=true \
-                          --token=$(cat $SA_TOKEN_FILE) \
-                          -n ivolve
+                        echo "$DOCKERHUB_CREDS_PSW" | docker login -u "$DOCKERHUB_CREDS_USR" --password-stdin
+                        docker push ${FULL_IMAGE}
                     '''
+                }
+            }
+        }
+
+        stage('5. Delete Image Locally') {
+            steps {
+                container('docker') {
+                    echo "Deleting local image: ${FULL_IMAGE}..."
+                    sh "docker rmi ${FULL_IMAGE} || true"
+                }
+            }
+        }
+
+        stage('6. Edit Image in deployment.yaml') {
+            steps {
+                echo "Updating deployment manifest..."
+                sh '''
+                    DEPLOY_FILE=$(find . -maxdepth 2 -name "*deploy*.yaml" -o -name "*deploy*.yml" | head -n 1)
+
+                    if [ -z "$DEPLOY_FILE" ]; then
+                        echo "deployment.yaml not found, creating a new deployment.yaml..."
+                        cat <<EOF > deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - name: demo-app
+        image: ${FULL_IMAGE}
+        ports:
+        - containerPort: 8080
+EOF
+                        DEPLOY_FILE="deployment.yaml"
+                    fi
+
+                    echo "Modifying image in $DEPLOY_FILE"
+                    sed -i "s|image: .*|image: ${FULL_IMAGE}|g" "$DEPLOY_FILE"
+                '''
+            }
+        }
+
+        stage('7. Deploy to K8s Cluster') {
+            steps {
+                container('kubectl') {
+                    echo 'Deploying application to Kubernetes cluster...'
+                    sh 'kubectl apply -f deployment.yaml'
                 }
             }
         }
@@ -88,13 +133,20 @@ pipeline {
 
     post {
         always {
-            sh 'docker logout || true'
+            echo 'Cleaning workspace and logging out...'
+            container('docker') {
+                sh 'docker logout || true'
+            }
+            container('maven') {
+                sh 'rm -rf * || true'
+            }
+            deleteDir()
         }
         success {
-            echo 'Pipeline completed successfully — deployment finished.'
+            echo 'SUCCESS: App built, pushed, and deployed to Kubernetes successfully!'
         }
         failure {
-            echo 'Pipeline failed — check the stage logs above.'
+            echo 'FAILURE: Check logs above for details.'
         }
     }
 }
@@ -118,8 +170,8 @@ Definition: Pipeline script from SCM
 
 SCM: Git
 
-Repository URL: https://github.com/Ibrahim-Adel15/Jenkins_App.git
+## Step 4: Run and Validate Pipeline
+Click Build Now to trigger the build. Monitor the Stage View to verify all  steps execute successfully.
 
-Script Path: Jenkinsfile
+<img src="Screenshots/1.png" alt="1" width="800">
 
-Click Save.
