@@ -94,14 +94,14 @@ pipeline {
     }
 
     parameters {
-        string(name: 'DOCKER_USER',     defaultValue: 'khairyops',                             description: 'Docker Hub Username')
-        string(name: 'APP_NAME',        defaultValue: 'jenkins-app',                            description: 'Application Name')
-        string(name: 'IMAGE_TAG',       defaultValue: "${BUILD_NUMBER}",                       description: 'Docker Image Tag')
-        string(name: 'NAMESPACE',       defaultValue: 'default',                                description: 'Kubernetes Target Namespace')
-        string(name: 'GIT_REPO_URL',    defaultValue: 'https://github.com/Ibrahim-Adel15/Jenkins_App.git', description: 'Source Code Repository URL')
-        string(name: 'GIT_BRANCH',      defaultValue: 'main',                                   description: 'Git Branch to Checkout')
-        string(name: 'DOCKER_CREDS_ID', defaultValue: 'dockerhub-creds',                       description: 'Jenkins Credential ID for Docker Hub')
-        string(name: 'K8S_CREDS_ID',    defaultValue: 'jenkins-sa-token',                       description: 'Jenkins Credential ID for Kubernetes')
+        string(name: 'DOCKER_USER',     defaultValue: 'khairyops',                                  
+        string(name: 'APP_NAME',        defaultValue: 'jenkins-app',                                 
+        string(name: 'IMAGE_TAG',       defaultValue: "${BUILD_NUMBER}",                      
+        string(name: 'NAMESPACE',       defaultValue: 'default',                                
+        string(name: 'GIT_REPO_URL',    defaultValue: 'https://github.com/Ibrahim-Adel15/Jenkins_App.git'
+        string(name: 'GIT_BRANCH',      defaultValue: 'main',                                 
+        string(name: 'DOCKER_CREDS_ID', defaultValue: 'dockerhub-creds',                     
+        string(name: 'K8S_CREDS_ID',    defaultValue: 'jenkins-sa-token',                      
     }
 
     environment {
