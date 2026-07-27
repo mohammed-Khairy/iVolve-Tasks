@@ -82,8 +82,7 @@ def call(Map config) {
 - Save
   
 ## Step 4: Create and Execute the Jenkins Pipeline
-Create a new Pipeline item named Jenkins-App-Pipeline.
-Configure the Jenkins file script using the definition below:
+Create a new Pipeline item named Jenkins-App-Pipeline and Configure the Jenkins file script :
 
 ```bash
 @Library('my-shared-library') _
@@ -147,7 +146,7 @@ pipeline {
         }
     }
 
-post {
+      post {
         always {
             echo 'Pipeline finished.'
         }
@@ -160,3 +159,6 @@ post {
     }
 }
 ```
+<img src="Screenshots/3.png" alt="1" width="800">
+
+
