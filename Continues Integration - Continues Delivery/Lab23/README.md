@@ -12,7 +12,7 @@ This repository demonstrates a complete CI/CD pipeline implementation using Jenk
 ## Step 2: Set Up Jenkins Shared Library
 Create Shared Library Repository Structure:
 Create a GitHub repository named jenkins-shared-library
-Define Library Functions (vars/):
+Define Library Functions (vars/)
 
 <img src="Screenshots/2.png" alt="1" width="800">
 
