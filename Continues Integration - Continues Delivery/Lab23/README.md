@@ -1,5 +1,7 @@
 # CI/CD Pipeline Implementation with Jenkins Agents and Shared Libraries
+
 This repository demonstrates a complete CI/CD pipeline implementation using Jenkins, Inbound Agents (Slaves), and Jenkins Shared Libraries to build and deploy an application on Kubernetes.
+
 ---
 
 ## Step 1: Configure Jenkins Inbound Agent (Slave)
