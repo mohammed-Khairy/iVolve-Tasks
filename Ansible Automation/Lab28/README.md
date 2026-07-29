@@ -37,6 +37,6 @@ Execute Ansible Ad-Hoc commands to confirm installation and extract version deta
 
 <img src="Screenshots/6.png" alt="1" width="700">
 
->Note on Inventory Scope (all vs managed): Since node01 is currently the sole host defined under the [managed] group, both targets (all and managed) yield identical execution results.
+>Note on Inventory Scope: Since node01 is currently the sole host defined under the [managed] group, both targets (all and managed) yield identical execution results.
 
 
