@@ -35,4 +35,8 @@ Verify the database setup on the managed node by logging in with the newly creat
 
 <img src="Screenshots/3.png" alt="1" width="500">
 
+>Security Note:
+- Passing the password inline (-p'Password') stores it in shell history, which is insecure instead Prompt for the password interactively so it remains hidden
+-  Alternative Best Practice (Option File) :Store credentials securely in ~/.my.cnf (chmod 600) so you can execute commands directly without inline passwords or warnings:
+
 
