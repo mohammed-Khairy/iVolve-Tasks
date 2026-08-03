@@ -88,6 +88,6 @@ Verify systemd status of MySQL directly via Ansible ad-hoc module execution:
 ansible-inventory -i aws_ec2.yaml --list | grep -A 5 "tag_service_db"
 ansible tag_service_db -m command -a "systemctl status mysql" --become
 ```
-<img src="Screenshots/3.png" alt="1" width="500">
-<img src="Screenshots/4.png" alt="1" width="500">
+<img src="Screenshots/3.png" alt="1" width="700">
+<img src="Screenshots/4.png" alt="1" width="700">
 
