@@ -80,7 +80,7 @@ ansible-playbook -i aws_ec2.yaml site.yaml
 
 <img src="Screenshots/2.png" alt="1" width="500">
 
-## step 4: Remote Service Verification
+## Step 4: Remote Service Verification
 Verify systemd status of MySQL directly via Ansible ad-hoc module execution:
 
 ```bash
