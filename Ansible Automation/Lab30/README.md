@@ -69,3 +69,25 @@ ansible tag_service_db -m ping
 <img src="Screenshots/1.png" alt="1" width="500">
 
 Download geerlingguy.mysql role and run the setup playbook:
+
+```bash
+# Download Ansible Role
+ansible-galaxy install geerlingguy.mysql
+
+# Execute Playbook
+ansible-playbook -i aws_ec2.yaml site.yaml
+```
+
+<img src="Screenshots/2.png" alt="1" width="500">
+
+## step 4: Remote Service Verification
+Verify systemd status of MySQL directly via Ansible ad-hoc module execution:
+
+```bash
+
+ansible-inventory -i aws_ec2.yaml --list | grep -A 5 "tag_service_db"
+ansible tag_service_db -m command -a "systemctl status mysql" --become
+```
+<img src="Screenshots/3.png" alt="1" width="500">
+<img src="Screenshots/4.png" alt="1" width="500">
+
